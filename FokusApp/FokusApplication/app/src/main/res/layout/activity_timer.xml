@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimerActivity">
+
+    // minutes for study
+
+    // Session
+
+    //minutes for breaks
+
+    <ImageButton
+        android:id="@+id/countdown_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2"
+        app:srcCompat="@drawable/roundedbutton" />
+
+    <TextView
+        android:id="@+id/QOTDText"
+        android:layout_width="413dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="start"
+        android:paddingHorizontal="30dp"
+        android:text="Motivation is what sets you in motion, habit it what keeps you going"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/QOTDTitle"
+        android:layout_width="411dp"
+        android:layout_height="25dp"
+        android:paddingHorizontal="30dp"
+        android:text="Quote Of The Day"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/QOTDText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/studyMinutesSlider"
+        android:layout_width="318dp"
+        android:layout_height="43dp"
+        android:stepSize="5"
+        android:value="20"
+        android:valueFrom="10"
+        android:valueTo="60"
+        app:layout_constraintBottom_toTopOf="@+id/breakMinutesBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyMinutesBox" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sessionsSlider"
+        android:layout_width="318dp"
+        android:layout_height="46dp"
+        android:stepSize="1"
+        android:value="4"
+        android:valueFrom="1"
+        android:valueTo="10"
+        app:layout_constraintBottom_toTopOf="@+id/QOTDTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sessionMinutesBox" />
+
+    <TextView
+        android:id="@+id/breakMinutesBox"
+        android:layout_width="221dp"
+        android:layout_height="19dp"
+        android:text="Break Interval"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/breakMinutesSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studyMinutesSlider" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/breakMinutesSlider"
+        android:layout_width="318dp"
+        android:layout_height="46dp"
+        android:stepSize="1"
+        android:value="5"
+        android:valueFrom="5"
+        android:valueTo="20"
+        app:layout_constraintBottom_toTopOf="@+id/sessionMinutesBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakMinutesBox" />
+
+    <TextView
+        android:id="@+id/countdown_activity_title"
+        android:layout_width="99dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Study Time"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/countdown_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/countdown_button"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <TextView
+        android:id="@+id/studyMinutesBox"
+        android:layout_width="222dp"
+        android:layout_height="19dp"
+        android:text="Study Interval"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/studyMinutesSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countdown_button" />
+
+    <TextView
+        android:id="@+id/countdown_text_start_pause"
+        android:layout_width="97dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="Start"
+        android:textColor="@color/colorSecondary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/countdown_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countdown_text"
+        app:layout_constraintVertical_bias="0.454" />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/actionbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/sessionMinutesBox"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:text="Amount of sessions"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/sessionsSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakMinutesSlider" />
+
+    <TextView
+        android:id="@+id/countdown_text"
+        android:layout_width="174dp"
+        android:layout_height="118dp"
+        android:gravity="center"
+        android:text="25:00"
+        android:textColor="@color/colorPrimary"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/countdown_button"
+        app:layout_constraintEnd_toEndOf="@+id/countdown_button"
+        app:layout_constraintStart_toStartOf="@+id/countdown_button"
+        app:layout_constraintTop_toTopOf="@+id/countdown_button" />
+
+    <Button
+        android:id="@+id/countdown_restart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetonClick"
+        android:text="Reset"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573"
+        tools:visibility="visible" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

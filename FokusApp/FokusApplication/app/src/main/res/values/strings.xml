@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fokus</string>
+    <string name="title_activity_load">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="sat">SAT</string>
+    <string name="fri">FRI</string>
+    <string name="thur">THUR</string>
+    <string name="wed">WED</string>
+    <string name="tue">TUE</string>
+    <string name="mon">MON</string>
+    <string name="sun">SUN</string>
+</resources>
